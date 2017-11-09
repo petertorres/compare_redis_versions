@@ -2,10 +2,10 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'redis'
 
-host = 'localhost'
+redis_host = 'localhost'
 set :bind, '0.0.0.0'
 
-$redis = Redis.new(host: host)
+$redis = Redis.new(host: redis_host)
 $keys = $redis.keys('dev*')
 
 get '/' do
