@@ -31,7 +31,7 @@ __END__
 
 @@ index
 %p Versions by environment
-%table{:class=>'table table-hover table-striped'}
+%table{:class=>'table table-condensed table-hover table-striped table-bordered'}
   %tr
   - ['Key Name','Dev','Pilot','Production'].each do |td|
     %th= td
