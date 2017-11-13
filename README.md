@@ -6,7 +6,7 @@ A single-page Sinatra script for comparing values in Redis.
 
 ### Requirements
 
-`$ gem install sinatra sinatra-contrib redis Haml`
+`$ gem install sinatra sinatra-contrib redis haml`
 
 ### Setup
 
