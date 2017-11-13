@@ -20,6 +20,21 @@ __END__
 %html
   %head
     %title Redis Versions
+    %link{:rel=>"icon",
+          :type=>"image/png",
+          :sizes=>"32x32",
+          :href=>"/favicon-32x32.png"}
+    %link{:rel=>"icon",
+          :type=>"image/png",
+          :sizes=>"16x16",
+          :href=>"/favicon-16x16.png"}
+    %link{:rel=>"apple-touch-icon",
+          :sizes=>"180x180",
+          :href=>"/apple-touch-icon.png"}
+    %link{:rel=>"manifest",
+          :href=>"/manifest.json"}
+    %meta{:name=>"theme-color",
+          :content=>"#ffffff"}
     %link{:rel=>"stylesheet",
           :href=>"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css",
           :integrity=>"sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb",
