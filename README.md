@@ -18,5 +18,5 @@ The script is self-contained in one file.  It uses an inline template to iterate
 `$ ruby ruby_compare.rb`
 
 ### TODO
-- [ ] Remove dependency on an environment key for de-dupe.
-- [ ] Increase left and right margin formatting.
+- [ ] Remove dependency on an environment key for de-dupe
+- [ ] Increase left and right margin formatting
