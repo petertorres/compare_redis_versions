@@ -1,12 +1,12 @@
 compare_redis_versions
 ======================
 
-A single-page sinatra script for comparing values in Redis.  
+A single-page Sinatra script for comparing values in Redis.  
 
 
 ### Requirements
 
-`$ gem install sinatra sinatra-contrib redis haml`
+`$ gem install sinatra sinatra-contrib redis Haml`
 
 ### Setup
 
