@@ -13,7 +13,8 @@ The script reads all values of a given key, and looks for redis entries in the f
 `{ENVIRONMENT}::{APPLICATION_NAME}::{APPLICATION_VERSION}`
 
 ### Running
-The script is self-contained in one file.  It uses an inline template to iterate through the keys.  
+The Sinatra app is self-contained in one file.  
+It uses an inline template, written in Haml, to iterate through the keys and create the view.
 
 `$ ruby ruby_compare.rb`
 
