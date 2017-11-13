@@ -10,7 +10,7 @@ A single-page Sinatra script for comparing values in Redis.
 
 ### Setup
 
-The script reads all values of a given key, but looks for redis entries in the following formats:
+The script reads all values of a given key, and looks for redis entries in the following formats:
 
 - `{ENVIRONMENT}::{APPLICATION_NAME}::{APPLICATION_VERSION}`
 
