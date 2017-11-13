@@ -19,4 +19,4 @@ The script is self-contained in one file.  It uses an inline template to iterate
 
 ### TODO
 - [ ] Remove dependency on an environment key for de-dupe
-- [√] Increase left and right margin formatting
+- [x] Increase left and right margin formatting
