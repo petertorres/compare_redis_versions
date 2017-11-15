@@ -6,7 +6,7 @@ redis_host = 'localhost'
 set :bind, '0.0.0.0'
 
 $redis = Redis.new(host: redis_host)
-$keys = $redis.keys('dev*')
+$keys = $redis.keys('prod*')
 
 get '/' do
   @title = "Compare Redis Versions"
