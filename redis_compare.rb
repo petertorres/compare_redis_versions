@@ -6,7 +6,7 @@ redis_host = 'localhost'
 set :bind, '0.0.0.0'
 
 $redis = Redis.new(host: redis_host)
-$keys = $redis.keys('dev*')
+$keys = $redis.keys('prod*')
 
 get '/' do
   @title = "Compare Redis Versions"
@@ -19,7 +19,7 @@ __END__
 !!! 5
 %html
   %head
-    %title Redis Versions
+    %title Compare Versions
     %link{:rel=>"stylesheet",
           :href=>"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css",
           :integrity=>"sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb",
