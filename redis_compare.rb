@@ -1,12 +1,20 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'redis'
+require 'set'
 
 redis_host = 'localhost'
 set :bind, '0.0.0.0'
 
 $redis = Redis.new(host: redis_host)
-$keys = $redis.keys('dev*')
+$all_keys = $redis.keys('*')
+$keys = []
+
+$all_keys.each do |k|
+  $keys << k.match('::').post_match
+end
+
+$keys = $keys.to_set
 
 get '/' do
   @title = "Compare Redis Versions"
@@ -19,7 +27,6 @@ __END__
 !!! 5
 %html
   %head
-    %title Redis Versions
     %link{:rel=>"icon",
           :type=>"image/png",
           :sizes=>"32x32",
@@ -35,6 +42,7 @@ __END__
           :href=>"/manifest.json"}
     %meta{:name=>"theme-color",
           :content=>"#ffffff"}
+    %title Compare Versions
     %link{:rel=>"stylesheet",
           :href=>"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css",
           :integrity=>"sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb",
@@ -54,4 +62,4 @@ __END__
     %tr
       %td= k.match('::').post_match
       - ['dev','pilot','production'].each do |env|
-        %td= $redis.get("#{env}::#{k.match('::').post_match}")
+        %td= $redis.get("#{env}::#{k}")
