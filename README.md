@@ -7,6 +7,9 @@ A single-page Sinatra script for comparing values in Redis.
 ### Requirements
 `$ gem install sinatra sinatra-contrib redis haml`
 
+or run Bundler to install dependencies:
+`$ bundle install`
+
 ### Setup
 The script reads all values of a given key, and looks for redis entries in the following formats:
 
