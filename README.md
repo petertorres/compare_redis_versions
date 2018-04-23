@@ -11,9 +11,11 @@ or run Bundler to install dependencies:
 `$ bundle install`
 
 ### Setup
-The script reads all values of a given key, and looks for redis entries in the following formats:
+- Set server target in `yaml/config.yml`
 
-`{ENVIRONMENT}::{APPLICATION_NAME}::{APPLICATION_VERSION}`
+- The script reads all values of a provided key, and looks for redis entries in the following formats:
+
+  `{ENVIRONMENT}::{APPLICATION_NAME}::{APPLICATION_VERSION}`
 
 ### Running
 The Sinatra app is self-contained in one file.  

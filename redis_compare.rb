@@ -5,10 +5,6 @@ require 'set'
 require 'yaml'
 
 config = YAML.load_file('yaml/config.yml')
-
-#redis_host = 'localhost'
-#set :bind, '0.0.0.0'
-
 redis_host = config['host']
 set :bind, '0.0.0.0'
 
