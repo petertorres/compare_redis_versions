@@ -1,6 +1,6 @@
 source 'https://rubygems.org' do
   gem 'sinatra'
-  gem 'sinatra-reloader'
+  gem 'sinatra-contrib'
   gem 'redis'
   gem 'haml'
 end
