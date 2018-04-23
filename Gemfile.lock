@@ -10,7 +10,6 @@ GEM
     rack (2.0.4)
     rack-protection (2.0.1)
       rack
-    rake (12.3.1)
     redis (4.0.1)
     sinatra (2.0.1)
       mustermann (~> 1.0)
@@ -32,7 +31,6 @@ PLATFORMS
 
 DEPENDENCIES
   haml!
-  rake!
   redis!
   sinatra!
   sinatra-contrib!
