@@ -2,8 +2,14 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'redis'
 require 'set'
+require 'yaml'
 
-redis_host = 'localhost'
+config = YAML.load_file('yaml/config.yml')
+
+#redis_host = 'localhost'
+#set :bind, '0.0.0.0'
+
+redis_host = config['host']
 set :bind, '0.0.0.0'
 
 $redis = Redis.new(host: redis_host)
