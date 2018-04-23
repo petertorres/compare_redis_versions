@@ -3,4 +3,5 @@ source 'https://rubygems.org' do
   gem 'sinatra-contrib'
   gem 'redis'
   gem 'haml'
+  gem 'yaml'
 end
