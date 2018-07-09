@@ -26,6 +26,6 @@ It uses an inline template, written in Haml, to iterate through the keys and cre
 
 and navigate to http://localhost:4567/.  
 
-###TODO
+### TODO
 - [ ] Update Bootstrap version  
 - [ ] Prune list with search  
