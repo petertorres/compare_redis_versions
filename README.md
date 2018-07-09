@@ -25,7 +25,3 @@ It uses an inline template, written in Haml, to iterate through the keys and cre
 `$ ruby ruby_compare.rb`
 
 and navigate to http://localhost:4567/.  
-
-### TODO
-- [ ] Update Bootstrap version  
-- [ ] Prune list with search  
