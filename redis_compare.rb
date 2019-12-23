@@ -8,7 +8,14 @@ config = YAML.load_file('yaml/config.yml')
 redis_host = config['host']
 set :bind, '0.0.0.0'
 
-$redis = Redis.new(host: redis_host)
+begin
+  Redis.ping(redis_host)
+rescue StandardError => e
+  abort("ERROR: Timed out connecting to Redis on #{redis_host}")
+end
+
+$redis = Redis.new(redis_host)
+
 $all_keys = $redis.keys('*')
 $keys = []
 
