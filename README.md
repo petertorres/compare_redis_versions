@@ -22,6 +22,6 @@ or run Bundler to install dependencies:
 The Sinatra app keeps its configuration information in YAML under `yaml/config.yml`  
 It uses an inline template, written in Haml, to iterate through the keys and create the view.
 
-`$ ruby ruby_compare.rb`
+`$ ruby redis_compare.rb`
 
 and navigate to http://localhost:4567/.  
