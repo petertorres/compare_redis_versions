@@ -28,9 +28,10 @@ jobs:
       with:
         ruby-version: 2.6
     - name: set env
+      env:
+        FOO: ${{ secrets.KEY_ID }}
       run: |
-        echo "foo = `echo ${{ secrets.KEY_ID }}`" >> foo
-        cat foo
+        echo FOO
     - name: Install dependencies
       run: bundle install
     #- name: Run tests
